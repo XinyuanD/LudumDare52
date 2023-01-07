@@ -14,7 +14,7 @@ TagManager:
   - UI
   - Background
   - 
-  - 
+  - House
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 4241441101
+    locked: 0
+  - name: House
+    uniqueID: 2766648309
     locked: 0
   - name: Player
     uniqueID: 2286154173

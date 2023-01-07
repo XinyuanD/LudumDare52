@@ -8,5 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MurderRoom.unity
+    guid: 2eb45bb84ac3caf40b33496b0079b548
+  - enabled: 1
+    path: Assets/Scenes/RoomA.unity
+    guid: f4c466a09ac99864c94cf34b3b2944c8
+  - enabled: 1
+    path: Assets/Scenes/RoomB.unity
+    guid: 7908c329aced75446890bc0ca1ba606f
+  - enabled: 1
+    path: Assets/Scenes/RoomC.unity
+    guid: 51dde57e0cd167d4387cf01d1f58aea0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: beec6597fff1561448ea4b9a90e0d733, type: 2}

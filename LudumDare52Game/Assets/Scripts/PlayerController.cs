@@ -12,11 +12,13 @@ public class PlayerController : MonoBehaviour
     // variables
     [SerializeField] private float moveSpeed = 5f;
     private Vector2 moveInput;
-
+    public VectorValue startPosition;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collider2d = GetComponent<BoxCollider2D>();
+        transform.position = startPosition.value;
     }
 
     void FixedUpdate()
