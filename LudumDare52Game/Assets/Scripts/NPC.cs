@@ -5,7 +5,6 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public DialogueManager dialogueManager;
-    public PlayerController player;
     public Dialogue[] conversations = new Dialogue[4];
 
     private void Start()
@@ -17,29 +16,29 @@ public class NPC : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (player.hasKey)
+            if (PlayerController.hasKey)
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[0]);
-                player.hasKey = false;
+                PlayerController.hasKey = false;
             }
-            else if (player.hasLetter)
+            else if (PlayerController.hasLetter)
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[1]);
-                player.hasLetter = false;
+                PlayerController.hasLetter = false;
             }
-            else if (player.hasDrugs)
+            else if (PlayerController.hasDrugs)
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[2]);
-                player.hasDrugs = false;
+                PlayerController.hasDrugs = false;
             }
-            else if (player.hasDagger)
+            else if (PlayerController.hasDagger)
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[3]);
-                player.hasDagger = false;
+                PlayerController.hasDagger = false;
             }
             else
             {

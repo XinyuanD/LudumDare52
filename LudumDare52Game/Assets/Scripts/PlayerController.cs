@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour
     public VectorValue startPosition;
 
     // item checks
-    public bool hasKey = false;
-    public bool hasLetter = false;
-    public bool hasDrugs = false;
-    public bool hasDagger = false;
+    public static bool hasKey = false;
+    public static bool hasLetter = false;
+    public static bool hasDrugs = false;
+    public static bool hasDagger = false;
+    public static bool hasEnteredRoomB = false;
 
     void Start()
     {

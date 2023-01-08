@@ -14,6 +14,11 @@ public class RoomTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             playerStorage.value = playerPosition;
+            if (targetSceneIndex == 3)
+            {
+                PlayerController.hasEnteredRoomB = true;
+            }
+
             SceneManager.LoadScene(targetSceneIndex);
         }
     }
