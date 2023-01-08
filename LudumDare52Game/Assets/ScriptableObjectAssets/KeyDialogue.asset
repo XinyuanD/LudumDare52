@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c882aef8760e48b7b6e371fcce995, type: 3}
+  m_Name: KeyDialogue
+  m_EditorClassIdentifier: 
+  messages:
+  - actorID: 0
+    message: WHO HERE KILLED FARMER JOHN??!!?
+  - actorID: 1
+    message: Let me go! It's not me!!!
+  - actorID: 2
+    message: I have no idea what you are talking about! It's not me!
+  - actorID: 3
+    message: I didn't do it either! Let us go!
+  - actorID: 0
+    message: Whose key is this? I found it on Farmer John's body. Explain!
+  - actorID: 3
+    message: Oh isn't that Tom's key? His house is just northeast of here
+  - actorID: 2
+    message: Let us go!! Please! I'm hungry...
+  actors:
+  - name: Scarecrow
+    sprite: {fileID: 21300000, guid: efdc110d07af76841ae89dd51fbf5b4a, type: 3}
+  - name: Tom
+    sprite: {fileID: 21300000, guid: 54cdac0990ddd8241a9e2ca83ab046e8, type: 3}
+  - name: Bakkins
+    sprite: {fileID: 21300000, guid: 3cebd36cbbf648b4cae9a754c6905858, type: 3}
+  - name: Emma
+    sprite: {fileID: 21300000, guid: 8aa62e5060fa4dc4a8097fd91b4811e0, type: 3}

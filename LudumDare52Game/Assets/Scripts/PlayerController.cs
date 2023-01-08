@@ -13,7 +13,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     private Vector2 moveInput;
     public VectorValue startPosition;
-    
+
+    // item checks
+    public bool hasKey = false;
+    public bool hasLetter = false;
+    public bool hasDrugs = false;
+    public bool hasDagger = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,6 +29,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogueManager.isDialogueActive)
+        {
+            return;
+        }
+
         Move();
     }
 
