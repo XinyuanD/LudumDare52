@@ -6,7 +6,6 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    //public DialogueTrigger trigger;
     public NPC npcs;
     public Image actorImage;
     public TextMeshProUGUI actorName;
@@ -23,19 +22,9 @@ public class DialogueManager : MonoBehaviour
         currentActors = dialogue.actors;
         activeMessage = 0;
         isDialogueActive = true;
-        Debug.Log("Started conversation! Messages Loaded: " + dialogue.messages.Length);
+        //Debug.Log("Started conversation! Messages Loaded: " + dialogue.messages.Length);
         DisplayMessage();
     }
-
-    //public void OpenDialogue(Message[] messages, Actor[] actors)
-    //{
-    //    currentMessages = messages;
-    //    currentActors = actors;
-    //    activeMessage = 0;
-    //    isDialogueActive = true;
-    //    Debug.Log("Started conversation! Messages Loaded: " + messages.Length);
-    //    DisplayMessage();
-    //}
 
     private void DisplayMessage()
     {
@@ -60,12 +49,7 @@ public class DialogueManager : MonoBehaviour
             npcs.DisableDialogueBox();
         }
     }
-
-    void Start()
-    {
-        
-    }
-
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isDialogueActive)

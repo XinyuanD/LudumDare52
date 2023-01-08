@@ -27,6 +27,8 @@ MonoBehaviour:
     message: Oh isn't that Tom's key? His house is just northeast of here
   - actorID: 2
     message: Let us go!! Please! I'm hungry...
+  - actorID: 2
+    message: '*yawns*'
   actors:
   - name: Scarecrow
     sprite: {fileID: 21300000, guid: efdc110d07af76841ae89dd51fbf5b4a, type: 3}
