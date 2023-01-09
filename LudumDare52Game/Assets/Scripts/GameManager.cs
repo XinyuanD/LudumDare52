@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         {
             itemTracker.hasItems[i] = false;
         }
+        VotingManager.hasMadeChoice = false;
         SceneManager.LoadScene("MurderRoom");
     }
 

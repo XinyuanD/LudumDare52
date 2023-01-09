@@ -9,16 +9,19 @@ public class VotingManager : MonoBehaviour
     public GameObject loseScreen;
     public static bool isVoting = false;
     [SerializeField] private int playerChoice;
+    public static bool hasMadeChoice = false;
 
     private void Update()
     {
         if (playerChoice == 2)
         {
+            hasMadeChoice = true;
             winScreen.SetActive(true);
             trigger.DisableVotingScreen();
         }
         else if (playerChoice == 1 || playerChoice == 3)
         {
+            hasMadeChoice = true;
             loseScreen.SetActive(true);
             trigger.DisableVotingScreen();
         }

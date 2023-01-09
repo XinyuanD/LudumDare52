@@ -31,10 +31,10 @@ MonoBehaviour:
     message: Maybe Bakkins did it. His house is just southeast of here
   actors:
   - name: Scarecrow
-    sprite: {fileID: 21300000, guid: efdc110d07af76841ae89dd51fbf5b4a, type: 3}
+    sprite: {fileID: 21300000, guid: 264f947b60399b8459c90307e9d3e3f6, type: 3}
   - name: Tom
-    sprite: {fileID: 21300000, guid: 54cdac0990ddd8241a9e2ca83ab046e8, type: 3}
+    sprite: {fileID: 21300000, guid: 107a30c755bea1c47949e502d052cec6, type: 3}
   - name: Bakkins
-    sprite: {fileID: 21300000, guid: 3cebd36cbbf648b4cae9a754c6905858, type: 3}
+    sprite: {fileID: 21300000, guid: 0f5c504efb763f04e8ff03002f0fdade, type: 3}
   - name: Emma
-    sprite: {fileID: 21300000, guid: 8aa62e5060fa4dc4a8097fd91b4811e0, type: 3}
+    sprite: {fileID: 21300000, guid: 3d3549a9fce1f3a4b94e0c0bd7cc9f2e, type: 3}

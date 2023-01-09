@@ -20,7 +20,7 @@ public class VotingTrigger : MonoBehaviour
     {
         if (DetectPlayer())
         {
-            if (!VotingManager.isVoting)
+            if (!VotingManager.isVoting && !VotingManager.hasMadeChoice)
             {
                 interactionBox.SetActive(true);
             }
