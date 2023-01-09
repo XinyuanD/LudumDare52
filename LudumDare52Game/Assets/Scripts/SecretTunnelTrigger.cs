@@ -1,34 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class VotingTrigger : MonoBehaviour
+public class SecretTunnelTrigger : MonoBehaviour
 {
-    public GameObject votingScreen;
-
     public Transform detectionPoint;
     public float detectionRadius;
     public LayerMask playerLayer;
     public GameObject interactionBox;
 
+    [SerializeField] private Vector2 playerPosition;
+    public VectorValue playerStorage;
+
     private void Start()
     {
-        DisableVotingScreen();
+        interactionBox.SetActive(false);
     }
 
     private void Update()
     {
         if (DetectPlayer())
         {
-            if (!VotingManager.isVoting)
-            {
-                interactionBox.SetActive(true);
-            }
+            interactionBox.SetActive(true);
             if (interactInput())
             {
+                playerStorage.value = playerPosition;
                 interactionBox.SetActive(false);
-                votingScreen.SetActive(true);
-                VotingManager.isVoting = true;
+                SceneManager.LoadScene("RoomB");
             }
         }
         else
@@ -49,14 +48,7 @@ public class VotingTrigger : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(detectionPoint.position, detectionRadius);
     }
-    
-    public void DisableVotingScreen()
-    {
-        VotingManager.isVoting = false;
-        votingScreen.SetActive(false);
-    }
 }
-
