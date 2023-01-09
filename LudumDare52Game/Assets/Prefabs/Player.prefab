@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5115564176350893344}
   - component: {fileID: 1952836198}
   - component: {fileID: 1952836197}
+  - component: {fileID: 2078903050}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -132,10 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   startPosition: {fileID: 11400000, guid: e6586a85e8ce96445a620ab42f046844, type: 2}
-  hasKey: 0
-  hasLetter: 0
-  hasDrugs: 0
-  hasDagger: 0
 --- !u!50 &1952836198
 Rigidbody2D:
   serializedVersion: 4
@@ -173,3 +170,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.07254982}
   m_Size: {x: 1.1900997, y: 2.536314}
   m_Direction: 0
+--- !u!95 &2078903050
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5115564176350893351}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 244d13947463caa4b9630d8abe10ac49, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

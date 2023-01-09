@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     // components
     private Rigidbody2D rb;
     private BoxCollider2D collider2d;
+    private Animator animator;
 
     // variables
     [SerializeField] private float moveSpeed = 5f;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         collider2d = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
         transform.position = startPosition.value;
     }
 
@@ -29,18 +31,22 @@ public class PlayerController : MonoBehaviour
     {
         if (DialogueManager.isDialogueActive || VotingManager.isVoting)
         {
+            animator.SetBool("IsWalking", false);
             return;
         }
 
-        Move();
+        Vector2 velocity = moveInput * moveSpeed;
+        if (velocity == new Vector2(Mathf.Epsilon, Mathf.Epsilon))
+        {
+            animator.SetBool("IsWalking", false);
+        }
+        else
+        {
+            rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+            animator.SetBool("IsWalking", true);
+        }
     }
 
-    private void Move()
-    {
-        Vector2 velocity = moveInput * moveSpeed;
-        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
-    }
-    
     private void OnMove(InputValue value) 
     {
         moveInput = value.Get<Vector2>();
