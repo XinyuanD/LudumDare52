@@ -528,6 +528,10 @@ PrefabInstance:
       propertyPath: playerPosition.y
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1448516251568464110, guid: ac9fc6dda243a3640947f4c2580e1bd0, type: 3}
+      propertyPath: targetSceneIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1448516251568464111, guid: ac9fc6dda243a3640947f4c2580e1bd0, type: 3}
       propertyPath: m_Name
       value: MainMapTrigger
@@ -1526,11 +1530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5115564176350893373, guid: 3f55ce3fb8ac15e40a9838cdd4f355e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.31
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 5115564176350893373, guid: 3f55ce3fb8ac15e40a9838cdd4f355e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.63
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5115564176350893373, guid: 3f55ce3fb8ac15e40a9838cdd4f355e0, type: 3}
       propertyPath: m_LocalPosition.z

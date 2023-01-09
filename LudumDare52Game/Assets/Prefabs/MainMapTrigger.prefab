@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45158424d2252343a61daa03591de62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneIndex: 0
-  playerPositionOffset: {x: 0, y: 2}
+  targetSceneIndex: 1
+  playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 11400000, guid: e6586a85e8ce96445a620ab42f046844, type: 2}
-  player: {fileID: 5115564176350893351, guid: 3f55ce3fb8ac15e40a9838cdd4f355e0, type: 3}

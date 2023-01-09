@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (DialogueManager.isDialogueActive)
+        if (DialogueManager.isDialogueActive || VotingManager.isVoting)
         {
             return;
         }
