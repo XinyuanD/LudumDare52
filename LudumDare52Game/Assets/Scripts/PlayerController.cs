@@ -15,10 +15,7 @@ public class PlayerController : MonoBehaviour
     public VectorValue startPosition;
 
     // item checks
-    public static bool hasKey = false;
-    public static bool hasLetter = false;
-    public static bool hasDrugs = false;
-    public static bool hasDagger = false;
+    public static bool[] hasItems = new bool[4]; // 0 is Key, 1 is Letter, 2 is Drugs, 3 is Dagger
     public static bool hasEnteredRoomB = false;
 
     void Start()

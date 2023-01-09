@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class ItemTrigger : MonoBehaviour
 {
+    public Transform detectionPoint;
+    public float detectionRadius;
+    public LayerMask playerLayer;
+
     public int itemID; // 0 is Key, 1 is Letter, 2 is Drugs, 3 is Dagger
+    public GameObject interactionBox;
     public Item itemTracker;
 
     private void Start()
@@ -15,29 +20,65 @@ public class ItemTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        if (other.tag == "Player")
+        if (DetectPlayer())
         {
-            if (itemID == 0)
+            interactionBox.SetActive(true);
+            if (interactInput())
             {
-                PlayerController.hasKey = true;
+                PlayerController.hasItems[itemID] = true;
+                itemTracker.hasItems[itemID] = true;
+                interactionBox.SetActive(false);
+                this.gameObject.SetActive(false);
             }
-            else if (itemID == 1)
-            {
-                PlayerController.hasLetter = true;
-            }
-            else if (itemID == 2)
-            {
-                PlayerController.hasDrugs = true;
-            }
-            else if (itemID == 3)
-            {
-                PlayerController.hasDagger = true;
-            }
-            
-            itemTracker.hasItems[itemID] = true;
-            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            interactionBox.SetActive(false);
         }
     }
+
+    private bool interactInput()
+    {
+        return Input.GetKeyDown(KeyCode.E);
+    }
+
+    private bool DetectPlayer()
+    {
+        return Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, playerLayer);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(detectionPoint.position, detectionRadius);
+    }
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+
+    //    if (other.tag == "Player")
+    //    {
+    //        if (itemID == 0)
+    //        {
+    //            PlayerController.hasKey = true;
+    //        }
+    //        else if (itemID == 1)
+    //        {
+    //            PlayerController.hasLetter = true;
+    //        }
+    //        else if (itemID == 2)
+    //        {
+    //            PlayerController.hasDrugs = true;
+    //        }
+    //        else if (itemID == 3)
+    //        {
+    //            PlayerController.hasDagger = true; 
+    //        }
+
+    //        itemTracker.hasItems[itemID] = true;
+    //        this.gameObject.SetActive(false);
+    //    }
+    //}
 }

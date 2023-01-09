@@ -16,29 +16,29 @@ public class NPC : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (PlayerController.hasKey)
+            if (PlayerController.hasItems[0])
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[0]);
-                PlayerController.hasKey = false;
+                PlayerController.hasItems[0] = false;
             }
-            else if (PlayerController.hasLetter)
+            else if (PlayerController.hasItems[1])
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[1]);
-                PlayerController.hasLetter = false;
+                PlayerController.hasItems[1] = false;
             }
-            else if (PlayerController.hasDrugs)
+            else if (PlayerController.hasItems[2])
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[2]);
-                PlayerController.hasDrugs = false;
+                PlayerController.hasItems[2] = false;
             }
-            else if (PlayerController.hasDagger)
+            else if (PlayerController.hasItems[3])
             {
                 dialogueManager.gameObject.SetActive(true);
                 dialogueManager.OpenDialogue(conversations[3]);
-                PlayerController.hasDagger = false;
+                PlayerController.hasItems[3] = false;
             }
             else
             {

@@ -28,7 +28,7 @@ MonoBehaviour:
   - actorID: 1
     message: Now that I think about it, I saw Farmer John at Bakkins house yesterday
   - actorID: 1
-    message: Maybe Bakkins did it
+    message: Maybe Bakkins did it. His house is just southeast of here
   actors:
   - name: Scarecrow
     sprite: {fileID: 21300000, guid: efdc110d07af76841ae89dd51fbf5b4a, type: 3}
